@@ -471,7 +471,7 @@ function App() {
                         className="space-y-4"
                         onSubmit={(e) => {
                           e.preventDefault();
-                          run(async () => {
+                          void run(async () => {
                             const result = await api('/account/2fa/confirm', {
                               enable: challenge.enable,
                               challengeId: challenge.id,
